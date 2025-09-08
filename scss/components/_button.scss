@@ -1,0 +1,52 @@
+@use '../../assets/styles/colors' as *;
+@use '../../assets/styles/fonts' as *;
+
+
+.button-text,
+.button-secondary,
+.button-primary,
+.button-secondary-blue {
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 36px;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.button-text {
+  @include regular-text-16-30;
+
+  background: none;
+  color: $dark-1;
+  padding: 0;
+}
+
+.button-primary {
+  @include title-medium-14;
+
+  background-color: $blue;
+  color: $white;
+}
+
+.button-secondary {
+  @include title-medium-14;
+
+  background-color: transparent;
+  color: $yellow;
+  outline: 1px solid $yellow;
+}
+
+.button-secondary-blue {
+  @include title-medium-14;
+
+  background-color: transparent;
+  color: $blue;
+  outline: 1px solid $blue;
+}

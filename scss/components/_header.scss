@@ -1,0 +1,69 @@
+@use '../../assets//styles/colors' as *;
+@use '../../assets/styles/typography' as *;
+@use '../../assets/styles/fonts' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 24px 0 80px;
+  position: relative;
+  z-index: 3;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px; 
+
+  .button-primary {
+    margin-left: 24px; 
+  }
+}
+
+.grey-field-header {
+  background-color: $grey-3;
+  width: 161px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width: 1280px) {
+  .button-wrapper {
+    gap: 30px;
+
+    .button-primary {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .grey-field-header {
+    width: 80px;
+    height: 30px;
+    background-color: $grey-2;
+    margin-bottom: 16px;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+
+    .button-text,
+    .button-primary {
+      width: 100%;
+      margin-left: 0; // перестраховка
+    }
+  }
+}

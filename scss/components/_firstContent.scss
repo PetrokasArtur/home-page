@@ -1,0 +1,149 @@
+@use '../../assets/styles/colors' as *;
+@use '../../assets/styles/typography' as *;
+@use '../../assets/styles/fonts' as *;
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 80px 0 72px;
+  gap: 48px; // вместо margin-right у text-block
+}
+
+.text-block {
+  margin-top: 157px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.text-under {
+  @include title-medium-14;
+  color: $yellow;
+  margin-bottom: 30px;
+}
+
+.first-title {
+  @include title-bold-72;
+  margin-bottom: 40px;
+}
+
+.text-two-under {
+  @include regular-text-16-24;
+  margin-bottom: 54px;
+}
+
+.first_button {
+  display: flex;
+  gap: 20px;
+}
+
+.photo-stack {
+  width: 50%;
+  min-width: 280px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -4%;
+    width: 49vw;
+    height: 120%;
+    background: url(/assets/images/delivery-of-goods-and-products-or-vaccine-in-coron-J7WFURP-min-scaled.svg) no-repeat 0 0 / cover;
+    opacity: 0.1;
+    z-index: 0;
+    border-radius: 0 0 0 150px;
+  }
+
+  .top {
+    width: 100%;
+    max-width: 510px;
+    height: auto;
+    object-fit: cover;
+    z-index: 2;
+    border-radius: 20px 20px 20px 0;
+    margin-left: 10px;
+  }
+}
+
+// --- адаптив ---
+@media (max-width: 1280px) {
+  .content {
+    margin: 60px 0;
+    gap: 32px;
+  }
+
+  .text-block {
+    width: 55%;
+    margin-top: 120px;
+  }
+
+  .first-title {
+    font-size: 56px;
+    margin-bottom: 32px;
+  }
+
+  .text-two-under {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 40px;
+  }
+
+  .first_button {
+    gap: 16px;
+  }
+
+  .photo-stack {
+    width: 45%;
+
+    .top {
+      max-width: 420px;
+    }
+
+    &::before {
+      width: 45vw;
+      top: -15%;
+      left: -2%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .text-block {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .first-title {
+    @include title-bold-48;
+  }
+
+  .first_button {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .photo-stack {
+    width: 100%;
+    justify-content: center;
+
+    .top {
+      max-width: 80%;
+      margin-left: 0;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}

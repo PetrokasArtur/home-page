@@ -1,0 +1,290 @@
+@use '../../assets//styles/colors' as *;
+@use '../../assets/styles/typography' as *;
+@use '../../assets/styles/fonts' as *;
+
+.contacts-wrapper {
+  background-color: $yellow;
+  padding: 0 20px;
+}
+
+.contacts {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 41px 0 39px 0;
+  box-sizing: border-box;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contact-text {
+    margin-top: 4px;
+
+    h3 {
+      @include title-medium-20;
+      color: $dark-1;
+      margin: 0;
+    }
+
+    p {
+      @include regular-text-15-20;
+      color: $dark-2;
+      margin: 0;
+    }
+  }
+
+  .divider-footer {
+    width: 1px;
+    background-color: $grey-2;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    width: 100%;
+    transform: none;
+    padding: 20px 15px;
+  }
+
+  .contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+
+    > div {
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .divider-footer {
+      display: none;
+    }
+
+    .contact-text {
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.footer-search {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 41px 0 39px 0;
+  box-sizing: border-box;
+  background-color: rgb(232, 236, 240);
+
+  .footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+
+  .about {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 299px;
+
+    p {
+      @include regular-text-16-24;
+    }
+  }
+
+  .company {
+    h3 {
+      @include title-bold-20;
+      color: $dark-1;
+      margin: 0 299px 0 0;
+    }
+
+    .footer-button {
+      display: flex;
+      flex-direction: column;
+
+      .button-active {
+        @include regular-text-16-30;
+        margin-top: -10px;
+        background: none;
+        border: none;
+        padding: 0;
+        text-align: left;
+        cursor: pointer;
+        color: $blue;
+        min-height: 0;
+      }
+
+      .button-text {
+        color: $grey-1;
+        min-height: 0;
+      }
+    }
+  }
+
+  .follow {
+    margin-left: auto;
+
+    h3 {
+      @include title-bold-20;
+      color: $dark-1;
+      margin: 0;
+    }
+
+    .footer-icon {
+      display: flex;
+      gap: 13px;
+
+      .social-sprite {
+        max-height: 129px;
+      }
+
+      .social-texts {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .social-item p {
+          @include regular-text-14-20;
+          color: $grey-1;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .about {
+      min-width: 200px;
+      margin-right: 150px;
+    }
+
+    .company h3 {
+      margin-right: 130px;
+    }
+
+    .line-footer {
+      margin-top: 30px;
+    }
+
+    .line-text {
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .about {
+      margin-right: 0;
+      margin-bottom: 0;
+      min-width: 100%;
+    }
+
+    .company,
+    .follow {
+      flex: 1;
+      margin: 0;
+      min-width: 50%;
+    }
+
+    .company {
+      h3 {
+        @include title-medium-14;
+      }
+
+      .footer-button {
+        display: flex;
+        flex-direction: column;
+
+        .button-active {
+          @include regular-text-15-20;
+          margin-top: -5px;
+          padding: 3px 0;
+          background: none;
+          border: none;
+          text-align: left;
+          cursor: pointer;
+          color: $blue;
+          min-height: 0;
+        }
+
+        .button-text {
+          @include regular-text-14-20;
+          padding: 3px 0;
+          min-height: 0;
+        }
+      }
+    }
+
+    .follow {
+      h3 {
+        @include title-medium-14;
+        margin: 0;
+      }
+
+      .footer-icon {
+        gap: 8px;
+      }
+
+      .social-texts {
+        gap: 5px;
+
+        .social-item p {
+          @include regular-text-14-20;
+        }
+      }
+    }
+
+    .line-footer {
+      margin-top: 20px;
+    }
+
+    .line-text {
+      margin: 20px 0 0 0;
+    }
+  }
+}
+
+.line-footer {
+  width: 100%;
+  border: 1px solid $grey-2;
+  margin-top: 54px;
+}
+
+.line-text {
+  width: 100%;
+  text-align: center;
+  margin: 32px 0 30px;
+}
+
+.grey-field {
+  background-color: $grey-3;
+  width: 161px;
+  height: 40px;
+  margin-bottom: 33px;
+}

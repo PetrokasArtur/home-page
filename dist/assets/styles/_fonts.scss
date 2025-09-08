@@ -1,0 +1,191 @@
+@use './typography' as *;
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/Rubik-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/Rubik-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/Rubik-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/OpenSans_Condensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/OpenSans_Condensed-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/OpenSans_Condensed-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/OpenSans_SemiCondensed-Bold.ttf') format('truetype');
+}
+
+@mixin regular-text-12-20 { 
+  font-family: $font-open-sans;
+  font-weight: $fw-regular;
+  font-size: $fs-12;
+  line-height: $lh-20;
+}
+@mixin regular-text-14-20 { 
+  font-family: $font-open-sans;
+  font-weight: $fw-regular;
+  font-size: $fs-14;
+  line-height: $lh-20;
+}
+
+@mixin regular-text-15-20 { 
+  font-family: $font-open-sans;
+  font-weight: $fw-regular;
+  font-size: $fs-15;
+  line-height: $lh-20;
+}
+
+@mixin regular-text-15-22 { 
+  font-family: $font-open-sans;
+  font-weight: $fw-regular;
+  font-size: $fs-15;
+  line-height: $lh-22;
+}
+
+@mixin regular-text-15-24 {
+  font-family: $font-open-sans;
+  font-weight: $fw-regular;
+  font-size: $fs-15;
+  line-height: $lh-24;
+}
+
+@mixin regular-text-16-24 {  
+  font-family: $font-open-sans;
+  font-weight: $fw-regular;
+  font-size: $fs-16;
+  line-height: $lh-24;
+}
+
+@mixin regular-text-16-30 { 
+  font-family: $font-open-sans;
+  font-weight: $fw-regular;
+  font-size: $fs-16;
+  line-height: $lh-30;
+}
+
+@mixin semibold-14 { 
+  font-family: $font-open-sans;
+  font-weight: $fw-semi-bold;
+  font-size: $fs-14;
+  line-height: $lh-24;
+}
+
+@mixin semibold-16 {   
+  font-family: $font-open-sans;
+  font-weight: $fw-semi-bold;
+  font-size: $fs-16;
+  line-height: $lh-24;
+}
+
+@mixin semibold-24 {
+  font-family: $font-open-sans;
+  font-weight: $fw-semi-bold;
+  font-size: $fs-24;
+  line-height: $lh-24;
+}
+
+@mixin bold-16 {    
+  font-family: $font-open-sans;
+  font-weight: $fw-bold;
+  font-size: $fs-16;
+  line-height: $lh-30;
+}
+
+@mixin bold-20 { 
+  font-family: $font-open-sans;
+  font-weight: $fw-bold;
+  font-size: $fs-20;
+  line-height: $lh-28;
+}
+
+@mixin title-medium-14 { 
+font-family: $font-rubik;
+  font-weight: $fw-medium;
+  font-size: $fs-14;
+  line-height: $lh-30;
+}
+
+@mixin title-medium-20 { 
+font-family: $font-rubik;
+  font-weight: $fw-medium;
+  font-size: $fs-20;
+  line-height: $lh-30;
+}
+
+@mixin title-bold-20 { 
+font-family: $font-rubik;
+  font-weight: $fw-bold;
+  font-size: $fs-20;
+  line-height: $lh-50;
+}
+
+@mixin title-bold-48 {  
+  font-family: $font-rubik;
+  font-weight: $fw-bold;
+  font-size: $fs-48;
+  line-height: $lh-50;
+}
+
+@mixin title-bold-72 { 
+  font-family: $font-rubik;
+  font-weight: $fw-bold;
+  font-size: $fs-72;
+  line-height: $lh-82;
+}
+
+
+
+
+
+
+
+

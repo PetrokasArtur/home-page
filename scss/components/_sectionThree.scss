@@ -1,0 +1,199 @@
+@use '../../assets//styles/colors' as *;
+@use '../../assets/styles/typography' as *;
+@use '../../assets/styles/fonts' as *;
+
+.number-three {
+  margin-bottom: 80px;
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+
+    @media (max-width: 1280px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.fabrica-img-wrapper {
+  flex: 0 0 50%;
+  position: relative;
+
+  img.fabrica-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .text-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 285px;
+    height: 332px;
+    background-color: $blue;
+    color: $white;
+    padding: 60px 30px 56px;
+    box-sizing: border-box;
+    z-index: 1;
+
+    p {
+      @include regular-text-15-24;
+      margin: 0;
+    }
+  }
+}
+
+.fabrika-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .top-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    .one-left,
+    .two-right {
+      width: 285px;
+      height: 332px;
+      box-sizing: border-box;
+      padding: 80px 30px 132px 30px;
+      p {
+        @include regular-text-15-24;
+        margin: 0;
+      }
+    }
+
+    .one-left {
+      background-color: $white;
+      color: $grey-1;
+      border-radius: 0 20px 0 0;
+    }
+
+    .two-right {
+      background-color: $blue;
+      color: $white;
+      border-radius: 0 20px 0 0;
+    }
+  }
+
+  .three-bottom {
+    background-color: $yellow;
+    padding: 45px 40px 49px 38px;
+    border-radius: 0 0 20px 0;
+
+    h2 {
+      @include title-bold-20;
+      color: $dark-1;
+      margin: 0 0 5px 0;
+    }
+
+    p {
+      @include regular-text-15-24;
+      margin: 0 0 26px 0;
+    }
+
+    .action-row {
+      display: flex;
+      align-items: center;
+
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-right: 40px;
+      }
+
+      .divider {
+        width: 1px;
+        height: 46px;
+        background-color: $white;
+        margin-right: 40px;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+
+        .contact-icon {
+          width: 46px;
+          height: 46px;
+        }
+
+        .contact-texts {
+          display: flex;
+          flex-direction: column;
+
+          .contact-title {
+            @include semibold-14;
+            color: $blue;
+          }
+
+          .contact-phone {
+            @include semibold-24;
+            color: $dark-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .fabrica-img-wrapper {
+    flex: 100%;
+    margin-bottom: 20px;
+  }
+
+  .top-text {
+    width: 100%;
+    height: 220px;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .one-left,
+  .two-right {
+    width: 100%;
+    height: 220px;
+  }
+
+  .three-bottom {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fabrica-img-wrapper {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    img.fabrica-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .text-right {
+      position: static;
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  .top-text {
+    display: none;
+  }
+
+  .three-bottom {
+    width: 100%;
+    padding: 30px 20px;
+  }
+}

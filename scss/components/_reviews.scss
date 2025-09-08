@@ -1,0 +1,150 @@
+@use '../../assets//styles/colors' as *;
+@use '../../assets/styles/typography' as *;
+@use '../../assets/styles/fonts' as *;
+
+
+.reviews {
+  display: flex;
+  gap: 65px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+}
+
+.review {
+  flex: 1;
+  background-color: $white;
+  padding: 40px 35px 40px 35px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px 15px 15px 0;
+  border: 1px solid $grey-2;
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stars img {
+  width: 80px;
+  height: auto;
+}
+
+.review-icon img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.2;
+  filter: invert(35%) sepia(99%) saturate(2222%) hue-rotate(201deg) brightness(100%) contrast(102%);
+}
+
+.review-text {
+  @include semibold-14;
+  color: $dark-2;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  @include semibold-14;
+  color: $dark-1;
+  margin: 0;
+}
+
+.position {
+  @include regular-text-12-20;
+  color: $grey-1;
+  margin: 0;
+  margin-top: -5px;
+}
+
+@media (max-width: 1024px) {
+  .reviews {
+    flex-direction: column;
+  }
+
+  .review {
+    padding: 20px 30px 30px 30px;
+  }
+
+  .review-top {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .stars img {
+    width: 70px;
+  }
+
+  .review-icon img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .review {
+    padding: 15px 20px 25px 20px;
+    border-radius: 12px 12px 12px 0;
+  }
+
+  .review-top {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .stars img {
+    width: 60px;
+  }
+
+  .review-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .review-text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .name {
+    font-size: 13px;
+  }
+
+  .position {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}

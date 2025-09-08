@@ -1,0 +1,53 @@
+@use '../../assets//styles/colors' as *;
+@use '../../assets/styles/typography' as *;
+@use '../../assets/styles/fonts' as *;
+
+.end-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 120px;
+
+  h1 {
+    @include title-bold-48;
+    color: $dark-1;
+    margin: 0 0 73px 0;
+  }
+
+  p {
+    @include regular-text-16-30;
+    color: $grey-1;
+    margin: 0 0 35px 0;
+  }
+
+  @media (max-width: 992px) {
+    max-width: 600px;
+    margin-bottom: 50px;
+
+    h1 {
+      @include title-bold-20;
+      margin-bottom: 20px;
+    }
+
+    p {
+      @include regular-text-15-24;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+
+    h1 {
+      @include title-bold-20;
+    }
+
+    p {
+      @include regular-text-14-20;
+    }
+  }
+}

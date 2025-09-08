@@ -1506,15 +1506,14 @@ footer {
 
 .fon-footer {
   position: absolute;
-  top: 320px;
+  bottom: -385px;
   left: -390px;
   width: calc(100% + 780px);
-  height: 99%;
+  height: 50%;
   z-index: -1;
 }
 .fon-footer img {
   width: 100%;
-  height: 80%;
   object-fit: cover;
   display: block;
   border-radius: 0 0 0 120px;
